@@ -1,0 +1,8 @@
+body {
+    background-color: #ffffff; /* cor de fundo padrão (claro) */
+}
+
+.dark-theme {
+    background-color: #000000; /* cor de fundo para o tema escuro */
+    color: #ffffff; /* cor do texto para o tema escuro */
+}

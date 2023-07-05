@@ -4,9 +4,18 @@
     <head>
         <meta charset="UTF-8">
         <title> MEU PERFIL </title>
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="script.js"></script>
+        
     </head>
     <body>
         <main>
+            <p>Escolha o tema:</p>
+            <label for="dark-theme">Escuro</label>
+            <input type="radio" id="dark-theme" name="theme" value="dark" onclick="changeTheme('dark')">
+            <label for="light-theme">Claro</label>
+            <input type="radio" id="light-theme" name="theme" value="light" onclick="changeTheme('light')">
 
         <H1>PAULO RODRIGUES</H1>
         <br>
@@ -116,6 +125,17 @@
         <footer>
             <p>&copy; 2023 Minha Página | Todos os direitos reservados</p>
         </footer>
+
+        <script>
+        function changeTheme(theme) {
+            var body = document.getElementsByTagName("body")[0];
+            if (theme === "dark") {
+                body.classList.add("dark-theme");
+            } else {
+                body.classList.remove("dark-theme");
+            }
+        }
+        </script>
         
     </body>
 
