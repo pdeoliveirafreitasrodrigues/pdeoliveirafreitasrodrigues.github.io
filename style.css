@@ -1,68 +1,84 @@
+.image-frame {
+    display: inline-block;
+    /* Manter a imagem e a moldura em linha */
+}
 
-        body {
-            background-color: #FFFFFF; /* Cor de fundo padrão */
-        }
+.image-frame p img{
+    border-radius: 500px;
+}
 
-        @media screen and (max-width: 768px) {
-            body {
-                background-color: #F2F2F2; /* Cor de fundo para dispositivos com largura máxima de 768px */
-            }
-        }
+body {
+    background-color: #100b2e;
+    /* Cor de fundo padrão */
+    color: #ffffff;
+}
 
-        main {
-            padding: 20px;
-        }
+@media screen and (max-width: 768px) {
+    body {
+        background-color: #100b2e;
+        /* Cor de fundo para dispositivos com largura máxima de 768px */
+    }
+}
 
-        h1 {
-            color: #333333;
-        }
+main {
+    padding: 20px;
+}
 
-        p {
-            margin-bottom: 10px;
-        }
+.main1 {
+    background-color: #e7e7e7;
+}
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+h1 {
+    color: #ffffff;
+}
 
-        section {
-            margin-bottom: 30px;
-        }
+p {
+    margin-bottom: 10px;
+}
 
-        h2 {
-            color: #555555;
-        }
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+section {
+    margin-bottom: 30px;
+}
 
-        li {
-            margin-bottom: 5px;
-        }
+h2 {
+    color: #ffffff;
+}
 
-        a {
-            color: #0000FF;
-            text-decoration: none;
-        }
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
+li {
+    margin-bottom: 5px;
+}
 
-        td, th {
-            border: 1px solid #CCCCCC;
-            padding: 8px;
-            text-align: left;
-        }
+a {
+    color: #72e9a4;
+    text-decoration: none;
+}
 
-        footer {
-            background-color: #EEEEEE;
-            padding: 10px;
-            text-align: center;
-            color: #777777;
-        }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #CCCCCC;
+    padding: 8px;
+    text-align: left;
+}
+
+footer {
+    background-color: #213357;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+}
