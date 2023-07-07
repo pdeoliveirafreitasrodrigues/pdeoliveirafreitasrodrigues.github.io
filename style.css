@@ -1,0 +1,68 @@
+
+        body {
+            background-color: #FFFFFF; /* Cor de fundo padrão */
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background-color: #F2F2F2; /* Cor de fundo para dispositivos com largura máxima de 768px */
+            }
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #555555;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #0000FF;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #CCCCCC;
+            padding: 8px;
+            text-align: left;
+        }
+
+        footer {
+            background-color: #EEEEEE;
+            padding: 10px;
+            text-align: center;
+            color: #777777;
+        }
