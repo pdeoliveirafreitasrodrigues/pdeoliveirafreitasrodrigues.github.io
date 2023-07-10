@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página com Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .link-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .link-list li {
+      margin-bottom: 10px;
+    }
+
+    .link-list li a {
+      display: block;
+      padding: 10px;
+      background-color: #e5e5e5;
+      color: #333;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .link-list li a:hover {
+      background-color: #ccc;
+    }
+
+    .theme-toggle {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .theme-toggle button {
+      padding: 10px 20px;
+      background-color: #e5e5e5;
+      color: #333;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Meus Links</h1>
+    <ul class="link-list">
+      <li><a href="#" onclick="funcao1()">Link 1</a></li>
+      <li><a href="#" onclick="funcao2()">Link 2</a></li>
+      <li><a href="#" onclick="funcao3()">Link 3</a></li>
+    </ul>
+    <div class="theme-toggle">
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+  </div>
+
+  <script>
+    function funcao1() {
+      // Ação a ser executada para o Link 1
+      alert('Link 1 clicado!');
+    }
+
+    function funcao2() {
+      // Ação a ser executada para o Link 2
+      alert('Link 2 clicado!');
+    }
+
+    function funcao3() {
+      // Ação a ser executada para o Link 3
+      alert('Link 3 clicado!');
+    }
+
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>

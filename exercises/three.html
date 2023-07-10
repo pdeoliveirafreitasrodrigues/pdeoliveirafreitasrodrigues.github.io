@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Exercícios parte 3</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      max-width: 400px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .checkbox {
+      display: block;
+      margin-top: 5px;
+    }
+
+    div {
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h1>Exercícios parte 3</h1>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+
+        <label for="email">Email:</label>
+        <input type="password" id="email">
+
+        <label for="opcoes">Opções select:</label>
+        <input type="text" id="opcoes">
+
+        <label class="checkbox">
+          <input type="radio" name="sexo" value="masculino"> Masculino
+        </label>
+        <label class="checkbox">
+          <input type="radio" name="sexo" value="feminino"> Feminino
+        </label>
+
+        <div>
+          <label for="cidade">Cidade</label>
+          <input type="text" id="cidade">
+        </div>
+        <div>
+          <label for="estado">Estado</label>
+          <select name="estado" id="estado">
+            <option value="">--</option>
+            <option value="PR">PR</option>
+			<option value="PR">SC</option>
+			<option value="PR">BA</option>
+			<option value="PR">TO</option>
+			<option value="PR">RS</option>
+          </select>
+        </div>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" cols="35" rows="8"></textarea>
+
+        <label for="newsletter">Newsletter</label>
+        <label>
+          <input type="checkbox" name="newsletter" value="1"> Gostaria de receber a Newsletter da empresa
+        </label>
+
+        <input type="submit" value="Enviar">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -2,165 +2,88 @@
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <title>MEU PERFIL</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Menu Paulo</title>
+    <link rel="stylesheet" href="styleIndex.css">
 </head>
 
 <body>
-    <main>
-        <div class="infos-pessoais">
-            <div class="image-frame">
-                <img src="photos/paulo.jpg" alt="Paulo Tocando Violão" width="200" height="100">
-            </div>
+    <div class="container">
+        <h1>Meus Links</h1>
 
-            <div>
-                <table>
-                    <tr>
-                        <td><img src="photos/pinMark.png" alt="Paulo Tocando Violão" width="20" height="10"></td>
-                        <td>Endereço: Rua São Jerônimo, 160. Apto. 101, Bloco D - Blumenau (SC)</td>
-                    </tr>
-                </table>
-            </div>
+        <br>
+
+        <ul class="link-list">
+            <li><a href="curriculo/curriculo.html">CURRICULO</a></li>
+        </ul>
+
+        <br>
+
+        <h2>Desafios de CSS</h2>
+        <ul class="link-list">
+            <li><a href="desafioCss/one.html">Atividade 01 - CSS</a></li>
+            <li><a href="desafioCss/two.html">Atividade 02 - CSS</a></li>
+            <li><a href="desafioCss/three.html">Atividade 03 - CSS</a></li>
+        </ul>
+
+        <h2>Desafios de JavaScript</h2>
+        <ul class="link-list">
+            <li><a href="#" onclick=ex01()>Atividade 01 - JavaScript</a></li>
+            <li><a href="#" onclick=ex02()>Atividade 02 - JavaScript</a></li>
+            <li><a href="#" onclick=ex03()>Atividade 03 - JavaScript</a></li>
+            <li><a href="#" onclick=ex04()>Atividade 04 - JavaScript</a></li>
+            <li><a href="#" onclick=ex05()>Atividade 05 - JavaScript</a></li>
+
+        </ul>
+
+        <div class="theme-toggle">
+            <button onclick="toggleDarkMode()">Dark Mode</button>
         </div>
+    </div>
 
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+        function ex01() {
+            let n1 = Math.abs(prompt('Insira a nota 01'))
+            let n2 = Math.abs(prompt('Insira a nota 02'))
+            let n3 = Math.abs(prompt('Insira a nota 03'))
 
-        <div class="infos-gerais">
-            <h1>PAULO RODRIGUES</h1>
-            <br>
-            <div style="width: 70%;">
-                <h2>Biografia:</h2>
-                <p>Paulo, uma personalidade vibrante de 22 anos, nasceu na encantadora cidade de Passos, em Minas
-                    Gerais.
-                    Desde cedo, ele foi envolvido pela magia da música e pela energia dos esportes. Com um coração cheio
-                    de
-                    paixões, Paulo encontrou sua felicidade em diversos aspectos da vida.</p>
-                <p>Desde que descobriu sua aptidão musical, Paulo mergulhou de cabeça nesse universo encantador. A
-                    música se
-                    tornou a trilha sonora de sua existência, permeando seus dias com harmonia e emoção. Seu talento
-                    musical
-                    se manifesta através da produção musical, onde Paulo canaliza sua criatividade e habilidades
-                    técnicas
-                    para criar composições que encantam os ouvidos daqueles que as escutam. Como um verdadeiro mestre
-                    das
-                    melodias, ele trilha seu caminho como um freelancer, transformando ideias em realidade sonora e
-                    deixando
-                    sua marca no mundo da música.</p>
-                <p>Contudo, a música não é a única paixão que Paulo cultiva. Sua alma aventureira e espírito livre o
-                    levaram
-                    a se apaixonar por jogos e viagens. Nos momentos de descontração, ele encontra diversão em
-                    desafiar-se
-                    em jogos eletrônicos, mergulhando em mundos virtuais cheios de adrenalina e estratégia. Além disso,
-                    Paulo alimenta sua sede por experiências ao viajar e explorar novos lugares. Cada destino visitado
-                    traz
-                    consigo uma dose extra de inspiração e aprendizado, nutrindo seu espírito curioso e sua sede de
-                    conhecimento.</p>
-                <p>Com uma mente inquieta e uma paixão por desafios, Paulo investiu em sua educação e alcançou o diploma
-                    em
-                    Sistemas de Informações. Seu amor pela tecnologia e sua capacidade de entender os meandros do mundo
-                    digital permitiram que ele se destacasse nessa área em constante evolução. Através dessa formação,
-                    Paulo
-                    adquiriu as habilidades necessárias para se aventurar no mundo do trabalho como freelancer,
-                    oferecendo
-                    seus serviços de produção musical. Essa combinação única de habilidades o torna um profissional
-                    versátil, capaz de unir sua paixão pela música com a sua expertise em tecnologia.</p>
-                <p>Paulo é uma pessoa com muitos talentos e um espírito resiliente. Ele abraça as oportunidades com
-                    entusiasmo e se dedica incansavelmente a cada novo projeto que assume. Seu amor pela música, sua
-                    sede
-                    por aventuras e sua capacidade de unir paixão e profissão são as forças que o impulsionam a
-                    continuar
-                    trilhando seu caminho, compartilhando sua arte com o mundo e espalhando alegria através dos acordes
-                    que
-                    ecoam em suas produções musicais.</p>
-            </div>
+            let media = (n1 + n2 + n3) / 3
+            let mediaDeci = media.toFixed(1)
+            alert('A média é: ' + mediaDeci)
+        }
+        function ex02(){
+            let temperatura = Math.abs(prompt('Digite uma temperatura em graus Celsius: '))
+            let faren = (temperatura * 9/5) + 32
+            let farenDec = faren.toFixed(2)
+            alert('A conversão de Celsius para Farenheit é : ' + farenDec + 'Fº')
+        }
+        function ex03(){
+            let largura = Math.abs(prompt('Digite a largura: '))
+            let altura = Math.abs(prompt('Digite a altura: '))
 
-            <br>
-            <header>
-                <h2>Sobre:</h2>
-                <nav>
-                    <ul>
-                        <li><a href="#LinksUteis">Links Úteis</a></li>
-                        <li><a href="#VideoFavorito">Vídeo Favorito</a></li>
-                        <li><a href="#Contato">Especialidades</a></li>
-                    </ul>
-                </nav>
-            </header>
+            let area = largura * altura
+            let areaDec = area.toFixed(2)
+            alert('A área do retângulo é : ' + areaDec + 'm²')
+        }
+        function ex04(){
+            let peso = Math.abs(prompt('Digite o peso: '))
+            let altura = Math.abs(prompt('Digite a altura: '))
 
-            <section id="LinksUteis">
-                <h3>Links Úteis:</h3>
-                <ul>
-                    <li><a href="https://github.com/pdeoliveirafreitasrodrigues">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/paulo-ricardo-b51aa5181/">Linkedin</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=xIFgKBUYODo&t=629s&pp=ygULYm9iIGVzcG9uamE%3D">Desenho
-                            do
-                            Bob-Esponja</a></li>
-                </ul>
-            </section>
+            let imc = peso / (altura*altura)
+            let imcDec = imc.toFixed(1)
+            alert('Seu imc é : ' + imcDec)
+        }
+        function ex05(){
+            let hora = Math.abs(prompt('Informe uma quantidade de Horas para converter: '))
+            let minutos = hora * 60;
 
-            <br>
-
-            <section id="VideoFavorito">
-                <h3>Vídeo Favorito:</h3>
-                <a href="https://www.youtube.com/embed/Z5NoQg8LdDk">POLYPHYA - PLAYING GOD</a>
-                <br>
-                <br>
-                <br>
-            </section>
-
-            <section id="Contato">
-                <h3>Conhecimentos</h3>
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>JR</th>
-                        <th>Pleno</th>
-                        <th>Senior</th>
-                        <th>GOD Supremo</th>
-                    </tr>
-                    <tr>
-                        <td>Java</td>
-                        <td>x</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Python</td>
-                        <td>x</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Barganha</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>x</td>
-                    </tr>
-                    <tr>
-                        <td>Valorant</td>
-                        <td></td>
-                        <td>x</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Dançar brake</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                        <td>NA</td>
-                    </tr>
-                </table>
-            </section>
-        </div>
-    </main>
+            alert(hora + ' hora(s) equivalem a ' + minutos.toFixed(2) + ' minutos')
+        }
+    </script>
 
 </body>
-
-<!-- <footer>
-    <p>&copy; 2023 Minha Página | Todos os direitos reservados</p>
-</footer> -->
 
 </html>

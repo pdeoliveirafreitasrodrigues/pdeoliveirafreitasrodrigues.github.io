@@ -17,14 +17,24 @@
 }
 
 .infos-pessoais {
-    background-color: #f7f7f7;
+    background-color: #dad0d0;
     color: #100b2e;
     width: 30%;    
     justify-content: center !important;
 }
 .infos-pessoais td{
     border: none;
-    font-size: smaller;
+    font-size: small;
+    text-align: left;
+}
+.infos-pessoais a {
+    color: #100b2e;
+    font-weight: bold;
+}
+.infos-pessoais h3 {
+    color: #100b2e;
+    text-align: left;
+    padding-left: 10%;
 }
 
 .infos-gerais{
@@ -32,6 +42,15 @@
     width: 70%;
     margin-left: 10%;
 }
+
+.imagi{
+    align-items: center;
+}
+
+.imagi td {
+    justify-content: center !important;
+}
+
 
 body {
     background-color: #100b2e;
