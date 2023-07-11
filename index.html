@@ -8,7 +8,12 @@
 
 <body>
     <div class="container">
-        <h1>Meus Links</h1>
+        <h1 class="blinking">Meus Links</h1>
+
+        <div class="theme-toggle">
+            <button onclick="toggleDarkMode()" id="themeButton">Dark Mode</button>
+        </div>
+
 
         <br>
 
@@ -25,6 +30,8 @@
             <li><a href="desafioCss/three.html">Atividade 03 - CSS</a></li>
         </ul>
 
+        <br>
+
         <h2>Desafios de JavaScript</h2>
         <ul class="link-list">
             <li><a href="#" onclick=ex01()>Atividade 01 - JavaScript</a></li>
@@ -32,18 +39,25 @@
             <li><a href="#" onclick=ex03()>Atividade 03 - JavaScript</a></li>
             <li><a href="#" onclick=ex04()>Atividade 04 - JavaScript</a></li>
             <li><a href="#" onclick=ex05()>Atividade 05 - JavaScript</a></li>
-
+            <li><a href="#" onclick=ex06()>Atividade 06 - JavaScript</a></li>
+            <li><a href="#" onclick=ex07()>Atividade 07 - JavaScript</a></li>
+            <li><a href="#" onclick=ex08()>Atividade 08 - JavaScript</a></li>
+            <li><a href="#" onclick=ex09()>Atividade 09 - JavaScript</a></li>
+            <li><a href="#" onclick=ex10()>Atividade 10 - JavaScript</a></li>
         </ul>
-
-        <div class="theme-toggle">
-            <button onclick="toggleDarkMode()">Dark Mode</button>
-        </div>
     </div>
 
     <script>
         function toggleDarkMode() {
             const body = document.body;
             body.classList.toggle('dark-mode');
+            const themeButton = document.getElementById('themeButton');
+
+            if (body.classList.contains('dark-mode')) {
+                themeButton.innerHTML = 'Light Mode';
+            } else {
+                themeButton.innerHTML = 'Dark Mode';
+            }
         }
         function ex01() {
             let n1 = Math.abs(prompt('Insira a nota 01'))
@@ -54,13 +68,13 @@
             let mediaDeci = media.toFixed(1)
             alert('A média é: ' + mediaDeci)
         }
-        function ex02(){
+        function ex02() {
             let temperatura = Math.abs(prompt('Digite uma temperatura em graus Celsius: '))
-            let faren = (temperatura * 9/5) + 32
+            let faren = (temperatura * 9 / 5) + 32
             let farenDec = faren.toFixed(2)
             alert('A conversão de Celsius para Farenheit é : ' + farenDec + 'Fº')
         }
-        function ex03(){
+        function ex03() {
             let largura = Math.abs(prompt('Digite a largura: '))
             let altura = Math.abs(prompt('Digite a altura: '))
 
@@ -68,19 +82,41 @@
             let areaDec = area.toFixed(2)
             alert('A área do retângulo é : ' + areaDec + 'm²')
         }
-        function ex04(){
+        function ex04() {
             let peso = Math.abs(prompt('Digite o peso: '))
             let altura = Math.abs(prompt('Digite a altura: '))
 
-            let imc = peso / (altura*altura)
+            let imc = peso / (altura * altura)
             let imcDec = imc.toFixed(1)
             alert('Seu imc é : ' + imcDec)
         }
-        function ex05(){
+        function ex05() {
             let hora = Math.abs(prompt('Informe uma quantidade de Horas para converter: '))
             let minutos = hora * 60;
 
             alert(hora + ' hora(s) equivalem a ' + minutos.toFixed(2) + ' minutos')
+        }
+        function ex06() {
+            let nome = prompt('Digite o nome: ')
+            let sobrenome = prompt('Digite o sobrenome: ')
+            alert('Olá ' + nome + ' ' + sobrenome)
+        }
+        function ex07() {
+            let texto = prompt('Digite uma palavra ou frase: ')
+            alert('Sua String contém (considerando espaços) ' + texto.length + " caracteres!")
+        }
+        function ex08() {
+            let texto = prompt('Digite uma palavra ou frase: ')
+            alert(texto.toUpperCase())
+        }
+        function ex09() {
+            let texto = prompt('Digite uma palavra ou frase: ')
+
+            alert(texto.substring(0,3))            
+        }
+        function ex10() {
+            let texto = prompt('Digite uma palavra ou frase: ')
+            alert(texto.replaceAll("a", "4").replaceAll("i", "1").replaceAll("e", "&").replaceAll("o", "8").replaceAll("u", "()"))
         }
     </script>
 

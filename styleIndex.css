@@ -1,3 +1,18 @@
+.blinking {
+    animation: blinkingText 3s infinite;
+}
+@keyframes blinkingText {
+    0% { color: rgb(195, 0, 255); }
+    14% { color: rgb(7, 0, 107); }
+    28% { color: rgb(212, 0, 255); }
+    42% { color: rgb(70, 240, 217); }
+    57% { color: blue; }
+    71% { color: indigo; }
+    85% { color: rgb(0, 0, 0); }
+    100% { color: rgb(174, 0, 255); }
+}
+
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
