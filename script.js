@@ -98,8 +98,8 @@ function ePrimos(num) {
         return false
     }
 
-    for (i = 2; i < Math.sqrt(num); i++) {
-        if (num % i === 0) {
+    for (c = 2; c < Math.sqrt(num); c++) {
+        if (num % c === 0) {
             return false
         }
     }
@@ -332,7 +332,7 @@ function ex28() {
 function ex29() {
     let nums = []
     let primo = false
-    for (i = 0; i <= 10; i++) {
+    for (i = 2; i <= 100; i++) {
         primo = ePrimos(i)
         if (primo == true) {
             nums.push(i)
