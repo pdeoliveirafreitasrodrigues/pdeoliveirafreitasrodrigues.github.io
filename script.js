@@ -331,9 +331,10 @@ function ex28() {
 
 function ex29() {
     let nums = []
-
+    let primo = false
     for (i = 0; i <= 10; i++) {
-        if (ePrimos(i) == true) {
+        primo = ePrimos(i)
+        if (primo == true) {
             nums.push(i)
         }
     }
