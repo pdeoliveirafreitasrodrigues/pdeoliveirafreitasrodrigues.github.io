@@ -2,8 +2,11 @@
 <html lang="pt">
 
 <head>
+    <meta charset="UTF-8">
     <title>Menu Paulo</title>
     <link rel="stylesheet" href="styleIndex.css">
+    <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -45,80 +48,34 @@
             <li><a href="#" onclick=ex09()>Atividade 09 - JavaScript</a></li>
             <li><a href="#" onclick=ex10()>Atividade 10 - JavaScript</a></li>
         </ul>
+
+        <br>
+
+        <h2>Desafios de JavaScript 02</h2>
+        <ul class="link-list">
+            <li><a href="#" onclick=ex11()>Atividade 11 - JavaScript</a></li>
+            <li><a href="#" onclick=ex12()>Atividade 12 - JavaScript</a></li>
+            <li><a href="#" onclick=ex13()>Atividade 13 - JavaScript</a></li>
+            <li><a href="#" onclick=ex14()>Atividade 14 - JavaScript</a></li>
+            <li><a href="#" onclick=ex15()>Atividade 15 - JavaScript</a></li>
+            <li><a href="#" onclick=ex16()>Atividade 16 - JavaScript</a></li>
+            <li><a href="#" onclick=ex17()>Atividade 17 - JavaScript</a></li>
+            <li><a href="#" onclick=ex18()>Atividade 18 - JavaScript</a></li>
+            <li><a href="#" onclick=ex19()>Atividade 19 - JavaScript</a></li>
+            <li><a href="#" onclick=ex20()>Atividade 20 - JavaScript</a></li>
+            <li><a href="#" onclick=ex21()>Atividade 21 - JavaScript</a></li>
+            <li><a href="#" onclick=ex22()>Atividade 22 - JavaScript</a></li>
+            <li><a href="#" onclick=ex23()>Atividade 23 - JavaScript</a></li>
+            <li><a href="#" onclick=ex24()>Atividade 24 - JavaScript</a></li>
+            <li><a href="#" onclick=ex25()>Atividade 25 - JavaScript</a></li>
+            <li><a href="#" onclick=ex26()>Atividade 26 - JavaScript</a></li>
+            <li><a href="#" onclick=ex27()>Atividade 27 - JavaScript</a></li>
+            <li><a href="#" onclick=ex28()>Atividade 28 - JavaScript</a></li>
+            <li><a href="#" onclick=ex29()>Atividade 29 - JavaScript</a></li>
+            <li><a href="#" onclick=ex30()>Atividade 30 - JavaScript</a></li>
+        </ul>
+
     </div>
-
-    <script>
-        function toggleDarkMode() {
-            const body = document.body;
-            body.classList.toggle('dark-mode');
-            const themeButton = document.getElementById('themeButton');
-
-            if (body.classList.contains('dark-mode')) {
-                themeButton.innerHTML = 'Light Mode';
-            } else {
-                themeButton.innerHTML = 'Dark Mode';
-            }
-        }
-        function ex01() {
-            let n1 = Math.abs(prompt('Insira a nota 01'))
-            let n2 = Math.abs(prompt('Insira a nota 02'))
-            let n3 = Math.abs(prompt('Insira a nota 03'))
-
-            let media = (n1 + n2 + n3) / 3
-            let mediaDeci = media.toFixed(1)
-            alert('A média é: ' + mediaDeci)
-        }
-        function ex02() {
-            let temperatura = Math.abs(prompt('Digite uma temperatura em graus Celsius: '))
-            let faren = (temperatura * 9 / 5) + 32
-            let farenDec = faren.toFixed(2)
-            alert('A conversão de Celsius para Farenheit é : ' + farenDec + 'Fº')
-        }
-        function ex03() {
-            let largura = Math.abs(prompt('Digite a largura: '))
-            let altura = Math.abs(prompt('Digite a altura: '))
-
-            let area = largura * altura
-            let areaDec = area.toFixed(2)
-            alert('A área do retângulo é : ' + areaDec + 'm²')
-        }
-        function ex04() {
-            let peso = Math.abs(prompt('Digite o peso: '))
-            let altura = Math.abs(prompt('Digite a altura: '))
-
-            let imc = peso / (altura * altura)
-            let imcDec = imc.toFixed(1)
-            alert('Seu imc é : ' + imcDec)
-        }
-        function ex05() {
-            let hora = Math.abs(prompt('Informe uma quantidade de Horas para converter: '))
-            let minutos = hora * 60;
-
-            alert(hora + ' hora(s) equivalem a ' + minutos.toFixed(2) + ' minutos')
-        }
-        function ex06() {
-            let nome = prompt('Digite o nome: ')
-            let sobrenome = prompt('Digite o sobrenome: ')
-            alert('Olá ' + nome + ' ' + sobrenome)
-        }
-        function ex07() {
-            let texto = prompt('Digite uma palavra ou frase: ')
-            alert('Sua String contém (considerando espaços) ' + texto.length + " caracteres!")
-        }
-        function ex08() {
-            let texto = prompt('Digite uma palavra ou frase: ')
-            alert(texto.toUpperCase())
-        }
-        function ex09() {
-            let texto = prompt('Digite uma palavra ou frase: ')
-
-            alert(texto.substring(0,3))            
-        }
-        function ex10() {
-            let texto = prompt('Digite uma palavra ou frase: ')
-            alert(texto.replaceAll("a", "4").replaceAll("i", "1").replaceAll("e", "&").replaceAll("o", "8").replaceAll("u", "()"))
-        }
-    </script>
 
 </body>
 
