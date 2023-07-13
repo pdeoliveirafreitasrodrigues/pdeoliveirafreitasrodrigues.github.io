@@ -26,8 +26,18 @@ function getPais(){
 
             document.getElementById("moeda").append(jsonRequest[0].languages[indiceMoeda]);
 
-            
+            document.getElementById("imagem").src= jsonRequest[0].flags.png;
 
+            carregarIFrame();
         })
     ;
+
+    function carregarIFrame(country){
+        
+        document.getElementById("iframe_images").setAttribute("style", "display: block");
+        const url = `https://www.google.com.br/search?q=${country}&tbm=isch`;
+        const iframe = document.querySelector("iframe");
+        iframe.src = url;
+
+    }
 }
