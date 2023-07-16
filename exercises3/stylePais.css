@@ -1,0 +1,85 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 20px;
+    background-color: rgba(225, 225, 225, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+input[type="text"],
+input[readonly] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+a#maps {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+a#maps:hover {
+    background-color: #f5f5f5;
+}
+
+img#img {
+    display: block;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilos específicos para cada campo */
+label[for="id_pais"],
+label[for="name"],
+label[for="sigla"],
+label[for="oficialName"],
+label[for="area"],
+label[for="lat"],
+label[for="long"],
+label[for="maps"],
+label[for="img"] {
+    font-weight: bold;
+}
+
+input[readonly][disabled] {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}

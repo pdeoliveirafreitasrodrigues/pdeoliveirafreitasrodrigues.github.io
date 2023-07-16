@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pesquisa Paises</title>
+    <link rel="stylesheet" href="stylePais.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Meu País</h1>
+        <form>
+            <label for="id_pais">Pesquise seu país:</label>
+            <input type="text" name="id_pais" id="id_pais" onblur="getPais(this.value);"/> <!-- AQUI É SÓ O CAMPO DE PESQUISA-->
+            <hr>
+            <div>
+
+                <div>
+                    <label for="name">NOME NATIVO:</label>
+                    <input readonly disabled type="text" name="name" id="name">
+                </div>
+
+                <div>
+                    <label for="sigla">SIGLA:</label>
+                    <input readonly disabled type="text" name="sigla" id="sigla">
+                </div>
+
+                <div>
+                    <label for="oficialName">Nome Oficial:</label>
+                    <input readonly disabled type="text" name="oficialName" id="oficialName">
+                </div>
+
+                <div>
+                    <label for="area">Área:</label>
+                    <input readonly disabled type="text" name="area" id="area">
+                </div>
+
+                <div>
+                    <label for="lat">Latitude:</label>
+                    <input readonly disabled type="text" name="lat" id="lat">
+                </div>
+
+                <div>
+                    <label for="long">Longitude:</label>
+                    <input readonly disabled type="text" name="long" id="long">
+                </div>
+                <div>
+                    <label for="long">Mapa do Local:</label>
+                    <a id="maps" href=""></a>
+                </div>
+            </div>
+            <br>
+            <div>
+                <label for="long">Bandeira:</label>
+                <img id="img" src="" alt="">
+            </div>
+        
+        </form>
+    </div>
+    <script src="pais.js"></script>
+</body>
+</html> 
+
