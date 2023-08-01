@@ -1,6 +1,8 @@
+
+//CONTROLE DA PÁGINA INDEX QUANTO AS OUTRAS ----------> MODAL MENU
 $(document).ready(function() {
     // Quando o botão "Abrir Menu" for clicado
-    $("#openModalButton").on("click", function() {
+    $("#btnModalMenu").on("click", function() {
       // Faça uma requisição AJAX para buscar o conteúdo do menu em "menu.html"
       $.ajax({
         url: "menu.html",
@@ -27,3 +29,22 @@ $(document).ready(function() {
     });
   });
   
+
+
+  // Script para carregar o currículo via AJAX
+    $(document).ready(function() {
+      $("#curriculoLink").on("click", function() {
+        $.ajax({
+          url: "caminho_do_seu_curriculo.html",
+          method: "GET",
+          dataType: "html",
+          success: function(data) {
+            // Quando a requisição for bem-sucedida, insira o conteúdo do currículo no modal
+            $("#modalContent").html(data);
+          },
+          error: function() {
+            console.log("Erro ao carregar o currículo.");
+          }
+        });
+      });
+    });
