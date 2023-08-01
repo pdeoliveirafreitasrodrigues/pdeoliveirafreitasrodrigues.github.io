@@ -30,21 +30,3 @@ $(document).ready(function() {
   });
   
 
-
-  // Script para carregar o currículo via AJAX
-    $(document).ready(function() {
-      $("#curriculoLink").on("click", function() {
-        $.ajax({
-          url: "caminho_do_seu_curriculo.html",
-          method: "GET",
-          dataType: "html",
-          success: function(data) {
-            // Quando a requisição for bem-sucedida, insira o conteúdo do currículo no modal
-            $("#modalContent").html(data);
-          },
-          error: function() {
-            console.log("Erro ao carregar o currículo.");
-          }
-        });
-      });
-    });
