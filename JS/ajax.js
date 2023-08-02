@@ -29,9 +29,13 @@ $(document).ready(function() {
     });
   });
   
-
+  $(document).ready(function() {
+    // Quando o botão "Abrir Menu" for clicado
+    $("#openMenuButton").on("click", function() {
+      // Exibe ou oculta o menu ao clicar no botão
+      $("#menuContainer").toggle();
+    });
 // Script para carregar o currículo via AJAX
-$(document).ready(function() {
   $("#curriculoLink").on("click", function() {
     $.ajax({
       url: "caminho_do_seu_curriculo.html",
@@ -39,7 +43,8 @@ $(document).ready(function() {
       dataType: "html",
       success: function(data) {
         // Quando a requisição for bem-sucedida, insira o conteúdo do currículo no modal
-        $("#modalContent").html(data);
+        $("#curriculoContent").html(data);
+        $("#curriculoContent").show();
       },
       error: function() {
         console.log("Erro ao carregar o currículo.");
