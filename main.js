@@ -37,7 +37,7 @@ $(document).ready(function() {
   // Script para carregar o currículo via AJAX
   $("#curriculoLink").on("click", function() {
     $.ajax({
-      url: "caminho_do_seu_curriculo.html",
+      url: "src/components/curriculo/curriculo.html",
       method: "GET",
       dataType: "html",
       success: function(data) {
