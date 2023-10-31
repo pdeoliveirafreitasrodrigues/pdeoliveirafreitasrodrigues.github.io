@@ -1,13 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Próximos jogos NBA</title>
+  <title>NBA Games of the Week</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 80%;
+      margin: 0 auto;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
-  <h1>Próximos jogos NBA</h1>
-  <div id="jogos">
-    </div>
-  <script src="js/jogos.js"></script>
+  <h1>NBA Games of the Week</h1>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Home Team</th>
+      <th>Away Team</th>
+    </tr>
+  </table>
+  <script>
+    // Função para fazer a solicitação à API da ESPN
+    function fetchNBAWeekGames() {
+      fetch('https://api.espn.com/v3/api/sports/basketball/nba/scoreboard?dates=2023-11-01')
+        .then(response => response.json())
+        .then(data => {
+          const games = data.events;
+          const table = document.querySelector('table');
+
+          games.forEach(game => {
+            const date = new Date(game.date);
+            const homeTeam = game.competitions[0].competitors[0].team.abbreviation;
+            const awayTeam = game.competitions[0].competitors[1].team.abbreviation;
+
+            const row = table.insertRow(-1);
+            const dateCell = row.insertCell(0);
+            const homeTeamCell = row.insertCell(1);
+            const awayTeamCell = row.insertCell(2);
+
+            dateCell.innerHTML = date.toDateString();
+            homeTeamCell.innerHTML = homeTeam;
+            awayTeamCell.innerHTML = awayTeam;
+          });
+        })
+        .catch(error => {
+          console.error('Erro ao buscar os jogos da NBA:', error);
+        });
+    }
+
+    // Chama a função para buscar os jogos quando a página é carregada
+    fetchNBAWeekGames();
+  </script>
 </body>
 </html>
